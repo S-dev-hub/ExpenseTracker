@@ -1,0 +1,157 @@
+.transaction {
+  width: 100%;
+  background: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  min-height: 4rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.transaction:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--box-shadow-lg);
+  border-color: var(--border-focus);
+}
+
+.transaction > div:first-child {
+  font-weight: 500;
+  color: var(--text-primary);
+  font-size: 1rem;
+  flex: 1;
+  margin-right: 1rem;
+}
+
+.amount {
+  font-weight: 600;
+  font-size: 1.125rem;
+  margin-right: 1rem;
+  transform: translateX(100px);
+  transition: all 0.3s ease-in-out;
+  min-width: 80px;
+  text-align: right;
+}
+
+.profit {
+  border-left: 4px solid;
+  border-image: var(--success-gradient) 1;
+}
+
+.loss {
+  border-left: 4px solid;
+  border-image: var(--danger-gradient) 1;
+}
+
+.profit .amount {
+  background: var(--success-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.loss .amount {
+  background: var(--danger-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.movePrice {
+  transform: translateX(0);
+}
+
+.transactionOptions {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btnContainer {
+  height: 100%;
+  align-items: center;
+  gap: 0.75rem;
+  transform: translateX(120%);
+  display: flex;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.edit,
+.delete {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.edit {
+  background: var(--warning-gradient);
+  box-shadow: var(--box-shadow);
+}
+
+.edit:hover {
+  transform: scale(1.1);
+  box-shadow: var(--box-shadow-lg);
+}
+
+.delete {
+  background: var(--danger-gradient);
+  box-shadow: var(--box-shadow);
+}
+
+.delete:hover {
+  transform: scale(1.1);
+  box-shadow: var(--box-shadow-lg);
+}
+
+.edit img,
+.delete img {
+  width: 1rem;
+  height: 1rem;
+  filter: brightness(0) invert(1);
+}
+
+@media (max-width: 480px) {
+  .transaction {
+    padding: 0.75rem;
+    min-height: 3.5rem;
+  }
+  
+  .transaction > div:first-child {
+    font-size: 0.875rem;
+  }
+  
+  .amount {
+    font-size: 1rem;
+    min-width: 70px;
+  }
+  
+  .edit,
+  .delete {
+    width: 2rem;
+    height: 2rem;
+  }
+  
+  .edit img,
+  .delete img {
+    width: 0.875rem;
+    height: 0.875rem;
+  }
+}

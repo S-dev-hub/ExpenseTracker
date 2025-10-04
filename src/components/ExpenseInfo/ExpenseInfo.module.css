@@ -1,0 +1,120 @@
+.expenseInfoContainer {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.balance {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: var(--border-radius-lg);
+  padding: 2rem;
+  text-align: center;
+  box-shadow: var(--box-shadow-xl);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.balance:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.balance h4 {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.balance h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.incomeExpenseContainer {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: var(--border-radius-lg);
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  box-shadow: var(--box-shadow-xl);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.incomeExpenseContainer:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.incomeExpenseContainer > div {
+  flex: 1;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.incomeExpenseContainer > div:first-of-type {
+  border-right: 1px solid var(--border-color);
+  margin-right: 1rem;
+}
+
+.incomeExpenseContainer h4 {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.money {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  margin: 0;
+}
+
+.money.plus {
+  background: var(--success-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.money.minus {
+  background: var(--danger-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@media (max-width: 480px) {
+  .balance {
+    padding: 1.5rem;
+  }
+  
+  .balance h1 {
+    font-size: 2rem;
+  }
+  
+  .incomeExpenseContainer {
+    padding: 1rem;
+  }
+  
+  .money {
+    font-size: 1.25rem;
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "expense-tracker",
+  "version": "1.0.0",
+  "description": "A simple React app to track income and expenses",
+  "author": "Sudhir pareek",
+  "keywords": ["react", "expense-tracker", "budget", "finance"],
+  "main": "src/index.js",
+  "custom-reporter": {
+    "type": "module"
+  },
+  "dependencies": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-scripts": "5.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --watchAll=false '--testResultsProcessor=<rootDir>/custom-reporter' '--silent' '--maxWorkers=2' ./",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
