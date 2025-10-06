@@ -62,6 +62,7 @@ const ExpenseForm = ({ onAddExpense, editingExpense, onCancelEdit }) => {
           className={styles.input}
           id="expenseAmount"
           type="number"
+          inputMode="numeric"
           placeholder="Enter amount..."
           ref={expenseAmountInput}
           required
